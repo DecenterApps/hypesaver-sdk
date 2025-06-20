@@ -10,6 +10,8 @@ export const actionAddresses = {
   AaveV3Borrow: '0x9b25a772deb74808ec0e1c4ca97f28cf975aebe5',
   AaveV3Supply: '0xf21f51c3c3a67e2bf980ddf08d80fbb1d49634f3',
   AaveV3SetEMode: '0xd601e069f229599416978dc089358bbd372dcdca',
+  AaveV3Payback: '0x87d55cbbff8bd8a67f75e75df73833c0092bb6f0',
+  AaveV3Withdraw: '0x759556b55af5e240bfd027d437148967a186d869',
 
   LSVSupply: '0xa489d6972c9d2db3afd278ac3ff69acf55b881f4',
   LSVBorrow: '0xe2574a2e61aa083d4685e49f5d494589e729bd4c',
