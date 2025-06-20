@@ -1,13 +1,12 @@
 import { Action } from '../../Action';
 import { getAddr } from '../../addresses';
 import { FlashLoanId } from './FlashLoanId';
-import { ActionWithL2 } from '../../ActionWithL2';
 /**
  * Gets a specific FL action
  *
  * @category Flashloans
  */
-type SpecificFlashLoanAction = (Action & FlashLoanId) | (ActionWithL2 & FlashLoanId);
+type SpecificFlashLoanAction = Action & FlashLoanId;
 
 export class FLAction extends Action {
   /**
@@ -28,13 +27,16 @@ export class FLAction extends Action {
   }
 
   constructor(specificFLAction: SpecificFlashLoanAction) {
-    super(
-      'FLAction',
-      getAddr('FLAction'),
-      [],
-      [],
-    );
-    this.paramTypes = ['address[]', 'uint256[]', 'uint256[]', 'address', 'address', 'bytes', 'bytes'];
+    super('FLAction', getAddr('FLAction'), [], []);
+    this.paramTypes = [
+      'address[]',
+      'uint256[]',
+      'uint256[]',
+      'address',
+      'address',
+      'bytes',
+      'bytes',
+    ];
     this.args = this.#handleArgs(specificFLAction);
   }
 }

@@ -4,8 +4,3 @@ export * from './AaveV3PaybackAction';
 export * from './AaveV3WithdrawAction';
 export * from './AaveV3SetEModeAction';
 export * from './AaveV3ATokenPaybackAction';
-export * from './AaveV3CollateralSwitchAction';
-export * from './AaveV3ClaimRewardsAction';
-export * from './AaveV3SwapBorrowRateModeAction';
-export * from './AaveV3DelegateCredit';
-export * from './AaveV3DelegateWithSigAction';

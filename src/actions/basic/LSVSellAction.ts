@@ -1,7 +1,7 @@
 import AbiCoder from 'web3-eth-abi';
 import { getAssetInfoByAddress } from '@defisaver/tokens';
 import ActionAbi from '../../abis/Action.json';
-import { ActionWithL2 } from '../../ActionWithL2';
+import { Action } from '../../Action';
 import { requireAddress } from '../../utils/general';
 import { getAddr } from '../../addresses';
 import { EthAddress } from '../../types';
@@ -11,8 +11,8 @@ import { EthAddress } from '../../types';
  *
  * @category BasicActions
  */
-export class LSVSellAction extends ActionWithL2 {
-  protocolFee:string;
+export class LSVSellAction extends Action {
+  protocolFee: string;
 
   /**
    * @param exchangeOrder Standard DFS Exchange data
@@ -20,13 +20,28 @@ export class LSVSellAction extends ActionWithL2 {
    * @param to Order recipient
    * @param protocolFee 0x fee (amount of ETH in Wei)
    */
-  constructor(exchangeOrder:Array<any>, from:EthAddress, to:EthAddress, protocolFee = '0') {
+  constructor(
+    exchangeOrder: Array<any>,
+    from: EthAddress,
+    to: EthAddress,
+    protocolFee = '0',
+  ) {
     requireAddress(to);
     super(
       'LSVSell',
       getAddr('LSVSell'),
       [
-        ['address', 'address', 'uint256', 'uint256', 'uint256', 'uint256', 'address', 'address', 'bytes', ['address', 'address', 'address', 'uint256', 'uint256', 'bytes']],
+        [
+          'address',
+          'address',
+          'uint256',
+          'uint256',
+          'uint256',
+          'uint256',
+          'address',
+          'address',
+          'bytes',
+        ],
         'address',
         'address',
       ],
@@ -45,8 +60,13 @@ export class LSVSellAction extends ActionWithL2 {
   }
 
   encodeInputs() {
-    const executeActionDirectAbi: any = (ActionAbi.find(({ name }) => name === 'executeActionDirect'))!;
-    return AbiCoder.encodeFunctionCall(executeActionDirectAbi, this._encodeForCall());
+    const executeActionDirectAbi: any = ActionAbi.find(
+      ({ name }) => name === 'executeActionDirect',
+    )!;
+    return AbiCoder.encodeFunctionCall(
+      executeActionDirectAbi,
+      this._encodeForCall(),
+    );
   }
 
   async getAssetsToApprove() {

@@ -1,7 +1,7 @@
 import AbiCoder from 'web3-eth-abi';
 import { getAssetInfoByAddress } from '@defisaver/tokens';
 import ActionAbi from '../../abis/Action.json';
-import { ActionWithL2 } from '../../ActionWithL2';
+import { Action } from '../../Action';
 import { requireAddress } from '../../utils/general';
 import { getAddr } from '../../addresses';
 import { EthAddress } from '../../types';
@@ -11,29 +11,40 @@ import { EthAddress } from '../../types';
  *
  * @category BasicActions
  */
-export class SellAction extends ActionWithL2 {
-  protocolFee:string;
-
+export class SellAction extends Action {
   /**
    * @param exchangeOrder Standard DFS Exchange data
    * @param from Order sender
    * @param to Order recipient
-   * @param protocolFee 0x fee (amount of ETH in Wei)
    */
-  constructor(exchangeOrder:Array<any>, from:EthAddress, to:EthAddress, protocolFee = '0') {
+  constructor(
+    exchangeOrder: Array<any>,
+    from: EthAddress,
+    to: EthAddress,
+    protocolFee = '0',
+  ) {
     requireAddress(to);
     super(
       'DFSSell',
       getAddr('DFSSell'),
       [
-        ['address', 'address', 'uint256', 'uint256', 'uint256', 'uint256', 'address', 'address', 'bytes', ['address', 'address', 'address', 'uint256', 'uint256', 'bytes']],
+        [
+          'address',
+          'address',
+          'uint256',
+          'uint256',
+          'uint256',
+          'uint256',
+          'address',
+          'address',
+          'bytes',
+          ['address', 'address', 'address', 'uint256', 'uint256', 'bytes'],
+        ],
         'address',
         'address',
       ],
       [exchangeOrder, from, to],
     );
-
-    this.protocolFee = protocolFee;
 
     this.mappableArgs = [
       this.args[0][0],
@@ -45,17 +56,18 @@ export class SellAction extends ActionWithL2 {
   }
 
   encodeInputs() {
-    const executeActionDirectAbi: any = (ActionAbi.find(({ name }) => name === 'executeActionDirect'))!;
-    return AbiCoder.encodeFunctionCall(executeActionDirectAbi, this._encodeForCall());
+    const executeActionDirectAbi: any = ActionAbi.find(
+      ({ name }) => name === 'executeActionDirect',
+    )!;
+    return AbiCoder.encodeFunctionCall(
+      executeActionDirectAbi,
+      this._encodeForCall(),
+    );
   }
 
   async getAssetsToApprove() {
     const asset = getAssetInfoByAddress(this.args[0][0]);
     if (asset.symbol !== 'ETH') return [{ asset: this.args[0][0], owner: this.args[1] }];
     return [];
-  }
-
-  async getEthValue() {
-    return this.protocolFee || '0';
   }
 }

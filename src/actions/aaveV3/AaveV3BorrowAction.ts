@@ -1,4 +1,4 @@
-import { ActionWithL2 } from '../../ActionWithL2';
+import { Action } from '../../Action';
 import { getAddr } from '../../addresses';
 import {
   EthAddress, uint8, uint16, uint256,
@@ -10,7 +10,7 @@ import { requireAddress } from '../../utils/general';
  *
  * @category AaveV3
  */
-export class AaveV3BorrowAction extends ActionWithL2 {
+export class AaveV3BorrowAction extends Action {
   /**
    * @param useDefaultMarket If this is true it defaults to the hardcoded market in contract
    * @param market Address provider for specific market
@@ -21,11 +21,40 @@ export class AaveV3BorrowAction extends ActionWithL2 {
    * @param useOnBehalf use on behalf or default to proxy
    * @param onBehalf On whose behalf we borrow the tokens, defaults to proxy
    */
-  constructor(useDefaultMarket: boolean, market: EthAddress, amount: uint256, to: EthAddress, rateMode: uint8, assetId: uint16, useOnBehalf: boolean, onBehalf: EthAddress = getAddr('Empty')) {
+  constructor(
+    useDefaultMarket: boolean,
+    market: EthAddress,
+    amount: uint256,
+    to: EthAddress,
+    rateMode: uint8,
+    assetId: uint16,
+    useOnBehalf: boolean,
+    onBehalf: EthAddress = getAddr('Empty'),
+  ) {
     requireAddress(to);
-    super('AaveV3Borrow', getAddr('AaveV3Borrow'),
-      ['uint256', 'address', 'uint8', 'uint16', 'bool', 'bool', 'address', 'address'],
-      [amount, to, rateMode, assetId, useDefaultMarket, useOnBehalf, market, onBehalf],
+    super(
+      'AaveV3Borrow',
+      getAddr('AaveV3Borrow'),
+      [
+        'uint256',
+        'address',
+        'uint8',
+        'uint16',
+        'bool',
+        'bool',
+        'address',
+        'address',
+      ],
+      [
+        amount,
+        to,
+        rateMode,
+        assetId,
+        useDefaultMarket,
+        useOnBehalf,
+        market,
+        onBehalf,
+      ],
     );
 
     this.mappableArgs = [
@@ -38,31 +67,5 @@ export class AaveV3BorrowAction extends ActionWithL2 {
       this.args[6],
       this.args[7],
     ];
-  }
-
-  encodeInputs() {
-    // executeActionDirectL2
-    let encodedInput = '0x2895f3aa';
-    // amount
-    encodedInput = encodedInput.concat(this.numberToBytes32(this.args[0]));
-    // to
-    encodedInput = encodedInput.concat(this.addressToBytes20(this.args[1]));
-    // rateMode
-    encodedInput = encodedInput.concat(this.numberToBytes1(this.args[2]));
-    // assetId
-    encodedInput = encodedInput.concat(this.numberToBytes2(this.args[3]));
-    // useDefaultMarket
-    encodedInput = encodedInput.concat(this.boolToBytes1(this.args[4]));
-    // useOnBehalf
-    encodedInput = encodedInput.concat(this.boolToBytes1(this.args[5]));
-    if (!this.args[4]) {
-      // market
-      encodedInput = encodedInput.concat(this.addressToBytes20(this.args[6]));
-    }
-    if (this.args[5]) {
-      // onBehalf
-      encodedInput = encodedInput.concat(this.addressToBytes20(this.args[7]));
-    }
-    return encodedInput;
   }
 }

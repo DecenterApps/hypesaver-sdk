@@ -1,10 +1,10 @@
 {
-  "name": "@defisaver/sdk",
+  "name": "@hypesaver/sdk",
   "version": "1.2.33",
   "description": "",
   "main": "./umd/index.js",
-  "module": "./esm/src/index.js",
-  "types": "./esm/src/index.d.ts",
+  "module": "./esm/index.js",
+  "types": "./esm/index.d.ts",
   "scripts": {
     "test": "mocha 'test/**'",
     "test-single": "mocha ./test/$npm_config_name.js",
@@ -49,7 +49,7 @@
     "jsdoc-to-markdown": "^6.0.1",
     "mocha": "^8.4.0",
     "ts-node": "^10.9.1",
-    "typedoc": "^0.23.20",
+    "typedoc": "^0.24.0",
     "typedoc-plugin-markdown": "^3.13.6",
     "typescript": "^4.8.4",
     "webpack": "^5.91.0",
