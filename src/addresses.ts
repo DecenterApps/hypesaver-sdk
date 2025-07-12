@@ -1,7 +1,10 @@
+import { MorphoBlueWithdrawCollateralAction } from './actions/morpho-blue';
 import { EthAddress } from './types';
 
 export const actionAddresses = {
   FLAaveV3: '0xe392aa16424cea0efce821f37e9b46c1c60bbfbb',
+  FLMorphoBlue: '0x5c8F48C4c95954d5879fc9d1CAF10FEab11C69B1',
+  FLAction: '0x9c9698274f0B5ac2F81f5869E470413eb6E7E16E',
 
   PullToken: '0x077d1831b6d7ad53e1393dd0bd79d34b4c045918',
   SendToken: '0x99ef1612dbd3b3e4fd332885f925a5f9123446b5',
@@ -13,6 +16,12 @@ export const actionAddresses = {
   AaveV3SetEMode: '0xd601e069f229599416978dc089358bbd372dcdca',
   AaveV3Payback: '0x87d55cbbff8bd8a67f75e75df73833c0092bb6f0',
   AaveV3Withdraw: '0x759556b55af5e240bfd027d437148967a186d869',
+
+  MorphoBlueSupplyCollateral: '0x76ce85d3c1502cC1ba3bE1a8D174646ddCB840e4',
+  MorphoBlueBorrow: '0x40503731c412677F27Ce5bD993E1f311F90a92f7',
+  MorphoBluePaybackAction: '0xD4153e26CE1e1EC17Cf84653077D0414D314B512',
+  MorphoBlueWithdrawCollateralAction:
+    '0xeB4F6882bb6F87316561d799cAEbDE2812a4EE79',
 
   LSVSupply: '0xa489d6972c9d2db3afd278ac3ff69acf55b881f4',
   LSVBorrow: '0xe2574a2e61aa083d4685e49f5d494589e729bd4c',

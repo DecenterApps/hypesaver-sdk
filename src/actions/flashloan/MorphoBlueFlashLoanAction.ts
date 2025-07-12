@@ -9,7 +9,7 @@ import { FlashLoanId } from './FlashLoanId';
  * @category Flashloans
  */
 export class MorphoBlueFlashLoanAction extends Action implements FlashLoanId {
-  public flashLoanId = 8;
+  public flashLoanId = 2;
 
   /**
    * @param token
@@ -17,12 +17,33 @@ export class MorphoBlueFlashLoanAction extends Action implements FlashLoanId {
    * @param flParamGetterAddr
    * @param flParamGetterData
    */
-  constructor(token: EthAddress, amount: uint256, flParamGetterAddr: EthAddress = getAddr('Empty'), flParamGetterData: bytes = []) {
+  constructor(
+    token: EthAddress,
+    amount: uint256,
+    flParamGetterAddr: EthAddress = getAddr('Empty'),
+    flParamGetterData: bytes = [],
+  ) {
     super(
       'FLMorphoBlue',
       getAddr('FLMorphoBlue'),
-      ['address[]', 'uint256[]', 'uint256[]', 'address', 'address', 'bytes', 'bytes'],
-      [[token], [amount], [], getAddr('Empty'), flParamGetterAddr, flParamGetterData, []],
+      [
+        'address[]',
+        'uint256[]',
+        'uint256[]',
+        'address',
+        'address',
+        'bytes',
+        'bytes',
+      ],
+      [
+        [token],
+        [amount],
+        [],
+        getAddr('Empty'),
+        flParamGetterAddr,
+        flParamGetterData,
+        [],
+      ],
     );
   }
 }
