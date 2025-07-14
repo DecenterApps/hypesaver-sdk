@@ -19,9 +19,8 @@ export const actionAddresses = {
 
   MorphoBlueSupplyCollateral: '0x76ce85d3c1502cC1ba3bE1a8D174646ddCB840e4',
   MorphoBlueBorrow: '0x40503731c412677F27Ce5bD993E1f311F90a92f7',
-  MorphoBluePaybackAction: '0xD4153e26CE1e1EC17Cf84653077D0414D314B512',
-  MorphoBlueWithdrawCollateralAction:
-    '0xeB4F6882bb6F87316561d799cAEbDE2812a4EE79',
+  MorphoBluePayback: '0xD4153e26CE1e1EC17Cf84653077D0414D314B512',
+  MorphoBlueWithdrawCollateral: '0xeB4F6882bb6F87316561d799cAEbDE2812a4EE79',
 
   LSVSupply: '0xa489d6972c9d2db3afd278ac3ff69acf55b881f4',
   LSVBorrow: '0xe2574a2e61aa083d4685e49f5d494589e729bd4c',
