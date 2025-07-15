@@ -8,8 +8,8 @@ import { FlashLoanId } from './FlashLoanId';
  *
  * @category Flashloans
  */
-export class MorphoBlueFlashLoanAction extends Action implements FlashLoanId {
-  public flashLoanId = 2;
+export class HyperbeatFlashLoanAction extends Action implements FlashLoanId {
+  public flashLoanId = 3;
 
   /**
    * @param token
@@ -25,7 +25,7 @@ export class MorphoBlueFlashLoanAction extends Action implements FlashLoanId {
   ) {
     super(
       'FLMorphoBlue',
-      getAddr('FLMorphoBlue'),
+      getAddr('FLAction'),
       [
         'address[]',
         'uint256[]',

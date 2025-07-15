@@ -2,9 +2,7 @@ import { MorphoBlueWithdrawCollateralAction } from './actions/morpho-blue';
 import { EthAddress } from './types';
 
 export const actionAddresses = {
-  FLAaveV3: '0x9c9698274f0B5ac2F81f5869E470413eb6E7E16E',
-  FLMorphoBlue: '0x9c9698274f0B5ac2F81f5869E470413eb6E7E16E',
-  FLAction: '0x9c9698274f0B5ac2F81f5869E470413eb6E7E16E',
+  FLAction: '0xe729cB7eE8f7cAFF8CA911D09cc44F99C9A5043A',
 
   PullToken: '0x077d1831b6d7ad53e1393dd0bd79d34b4c045918',
   SendToken: '0x99ef1612dbd3b3e4fd332885f925a5f9123446b5',
