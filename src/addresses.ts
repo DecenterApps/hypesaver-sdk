@@ -8,6 +8,8 @@ export const actionAddresses = {
   SendToken: '0x99ef1612dbd3b3e4fd332885f925a5f9123446b5',
   DFSSell: '0x33aff4acee8c0c1d1ec94eefa3f061a1f426e451',
   LSVSell: '0x33aff4acee8c0c1d1ec94eefa3f061a1f426e451',
+  WrapEth: '0x9Deba7Ed8d38c7ae4630e2AD510eFE042D168aAc',
+  UnwrapEth: '0x8a02AedCb2848879670aBCBE56F440eEe03C3bD4',
 
   AaveV3Borrow: '0x9b25a772deb74808ec0e1c4ca97f28cf975aebe5',
   AaveV3Supply: '0xf21f51c3c3a67e2bf980ddf08d80fbb1d49634f3',
