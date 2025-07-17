@@ -161,8 +161,9 @@ export class Recipe {
    * ETH value to be sent with transaction
    * @returns ETH value in wei
    */
-  async getEthValue(): Promise<string> {
-    return (await Promise.all(this.actions.map((a) => a.getEthValue())))
+  getEthValue(): string {
+    return this.actions
+      .map((a) => a.getEthValue())
       .reduce((acc, val) => acc.add(toBN(val)), toBN(0))
       .toString();
   }

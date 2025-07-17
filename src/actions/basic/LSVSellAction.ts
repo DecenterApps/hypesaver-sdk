@@ -75,7 +75,7 @@ export class LSVSellAction extends Action {
     return [];
   }
 
-  async getEthValue() {
+  getEthValue() {
     return this.protocolFee || '0';
   }
 }

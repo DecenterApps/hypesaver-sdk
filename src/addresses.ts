@@ -1,4 +1,3 @@
-import { MorphoBlueWithdrawCollateralAction } from './actions/morpho-blue';
 import { EthAddress } from './types';
 
 export const actionAddresses = {

@@ -215,7 +215,7 @@ export class Action {
    * ETH value to be sent with transaction
    * @returns ETH value in wei
    */
-  async getEthValue(): Promise<string> {
+  getEthValue(): string {
     return '0';
   }
 }

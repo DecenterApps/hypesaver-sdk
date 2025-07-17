@@ -21,7 +21,7 @@ export class WrapEthAction extends Action {
     );
   }
 
-  async getEthValue() {
+  getEthValue() {
     return this.args[1] ? this.args[0] : 0;
   }
 }
