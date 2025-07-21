@@ -27,6 +27,7 @@ export class LSVSellAction extends Action {
     protocolFee = '0',
   ) {
     requireAddress(to);
+
     super(
       'LSVSell',
       getAddr('LSVSell'),
@@ -41,6 +42,7 @@ export class LSVSellAction extends Action {
           'address',
           'address',
           'bytes',
+          ['address', 'address', 'address', 'uint256', 'uint256', 'bytes'],
         ],
         'address',
         'address',
