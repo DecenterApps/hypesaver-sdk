@@ -5,8 +5,8 @@ export const actionAddresses = {
 
   PullToken: '0x077d1831b6d7ad53e1393dd0bd79d34b4c045918',
   SendToken: '0x99ef1612dbd3b3e4fd332885f925a5f9123446b5',
-  DFSSell: '0xFa9e5a62e72Ef627E0e611d9252bD0519f4122Ab',
-  LSVSell: '0xFa9e5a62e72Ef627E0e611d9252bD0519f4122Ab',
+  DFSSell: '0xfee132530ed726ba34786b3d38ff7acd8515b416',
+  LSVSell: '0xfee132530ed726ba34786b3d38ff7acd8515b416',
   WrapEth: '0x9Deba7Ed8d38c7ae4630e2AD510eFE042D168aAc',
   UnwrapEth: '0x8a02AedCb2848879670aBCBE56F440eEe03C3bD4',
 
