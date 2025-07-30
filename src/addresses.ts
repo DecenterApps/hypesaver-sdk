@@ -1,32 +1,31 @@
 import { EthAddress } from './types';
 
 export const actionAddresses = {
-  FLAction: '0xe729cB7eE8f7cAFF8CA911D09cc44F99C9A5043A',
+  FLAction: '0x40e0a56da40bf3066866f9d6d352cf746c6d4f0b',
 
-  PullToken: '0x077d1831b6d7ad53e1393dd0bd79d34b4c045918',
-  SendToken: '0x99ef1612dbd3b3e4fd332885f925a5f9123446b5',
-  DFSSell: '0xfee132530ed726ba34786b3d38ff7acd8515b416',
-  LSVSell: '0xfee132530ed726ba34786b3d38ff7acd8515b416',
-  WrapEth: '0x9Deba7Ed8d38c7ae4630e2AD510eFE042D168aAc',
-  UnwrapEth: '0x8a02AedCb2848879670aBCBE56F440eEe03C3bD4',
+  PullToken: '0x16bc9e12ee596199dbf3a784bd3d7f7f3b8d0826',
+  SendToken: '0xc5eb44f9d63a2b9f1a7367049ae6ec6dd4a70759',
+  WrapEth: '0x927a91c788f5dbb08d5976501ca17e09c0ecbbcd',
+  UnwrapEth: '0xad106a9ab883c905dd139aa8f1e85a1fd831cff1',
 
-  AaveV3Borrow: '0x9b25a772deb74808ec0e1c4ca97f28cf975aebe5',
-  AaveV3Supply: '0xf21f51c3c3a67e2bf980ddf08d80fbb1d49634f3',
-  AaveV3SetEMode: '0xd601e069f229599416978dc089358bbd372dcdca',
-  AaveV3Payback: '0x87d55cbbff8bd8a67f75e75df73833c0092bb6f0',
-  AaveV3Withdraw: '0x759556b55af5e240bfd027d437148967a186d869',
+  AaveV3Borrow: '0x1c0496e78466af030cd40bd92d786881b339e606',
+  AaveV3Supply: '0x1b7d04d91923b8f4eb6ce7bf868445282ee25a26',
+  AaveV3SetEMode: '0xca00a1b6be0051ff353f016df0a10150f82a95d7',
+  AaveV3Payback: '0x0ddc5bac923742a2e361bf8dcf00dbad349bc5d1',
+  AaveV3Withdraw: '0x45cddf5c8aa2a54bfd107a0fb5ae90a119a12b2a',
 
-  MorphoBlueSupplyCollateral: '0x76ce85d3c1502cC1ba3bE1a8D174646ddCB840e4',
-  MorphoBlueBorrow: '0x40503731c412677F27Ce5bD993E1f311F90a92f7',
-  MorphoBluePayback: '0xD4153e26CE1e1EC17Cf84653077D0414D314B512',
-  MorphoBlueWithdrawCollateral: '0xeB4F6882bb6F87316561d799cAEbDE2812a4EE79',
+  MorphoBlueSupplyCollateral: '0x4e7ad9714d1622b449acbb38bbe08a0a02b05ffe',
+  MorphoBlueBorrow: '0x0038b73bbc30a3a4d74c987d4cee96082dcb6ef5',
+  MorphoBluePayback: '0x45c413dbf3eef0d54dbb3680cca79689686e50aa',
+  MorphoBlueWithdrawCollateral: '0xbdf7f07ebf6f7c5ed4229d9ea0b46eb9ae392035',
 
-  LSVSupply: '0xa489d6972c9d2db3afd278ac3ff69acf55b881f4',
-  LSVBorrow: '0xe2574a2e61aa083d4685e49f5d494589e729bd4c',
-  LSVPayback: '0x6768868d77fa7147083f5849625fb203ac4e37ed',
-  LSVWithdraw: '0xc6eb6091b4e07cbb64badbb3dc6a0e6b6c5e2357',
+  LSVSupply: '0xbf3f6dd2a510f8a1fd35cbb46a09d33847e5c962',
+  LSVBorrow: '0xf4691e11f7f73a9350777d0cc25e06d480181f7f',
+  LSVPayback: '0xbd131db75a0f249e59c2b103999e1c202be0408f',
+  LSVWithdraw: '0x1cdb2bbc96ec88fd47f736c579fc7589ed2fbb17',
+  LSVSell: '0xd31ec966f92fe8ba9258f2288e14ee9751f6bffe',
 
-  RecipeExecutor: '0x639cd0dc7c511392eabc5265baacb8df2a0039d1',
+  RecipeExecutor: '0x58d4d41efdecb42924a745fc5856acd2c6fdddc3',
 
   Empty: '0x0000000000000000000000000000000000000000',
 };
