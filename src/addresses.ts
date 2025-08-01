@@ -23,7 +23,7 @@ export const actionAddresses = {
   LSVBorrow: '0xf4691e11f7f73a9350777d0cc25e06d480181f7f',
   LSVPayback: '0xbd131db75a0f249e59c2b103999e1c202be0408f',
   LSVWithdraw: '0x1cdb2bbc96ec88fd47f736c579fc7589ed2fbb17',
-  LSVSell: '0xd31ec966f92fe8ba9258f2288e14ee9751f6bffe',
+  LSVSell: '0xd67606CAe3A51050bD226ae62381b0fDac478a9A',
 
   RecipeExecutor: '0x58d4d41efdecb42924a745fc5856acd2c6fdddc3',
 
