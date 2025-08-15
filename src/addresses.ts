@@ -1,7 +1,7 @@
 import { EthAddress } from './types';
 
 export const actionAddresses = {
-  FLAction: '0x40e0a56da40bf3066866f9d6d352cf746c6d4f0b',
+  FLAction: '0x2eca66063af3af3f79516349743e8ee8c86d5a42',
 
   PullToken: '0x16bc9e12ee596199dbf3a784bd3d7f7f3b8d0826',
   SendToken: '0xc5eb44f9d63a2b9f1a7367049ae6ec6dd4a70759',
@@ -19,11 +19,11 @@ export const actionAddresses = {
   MorphoBluePayback: '0x45c413dbf3eef0d54dbb3680cca79689686e50aa',
   MorphoBlueWithdrawCollateral: '0xbdf7f07ebf6f7c5ed4229d9ea0b46eb9ae392035',
 
-  LSVSupply: '0xbf3f6dd2a510f8a1fd35cbb46a09d33847e5c962',
-  LSVBorrow: '0xf4691e11f7f73a9350777d0cc25e06d480181f7f',
-  LSVPayback: '0xbd131db75a0f249e59c2b103999e1c202be0408f',
-  LSVWithdraw: '0x1cdb2bbc96ec88fd47f736c579fc7589ed2fbb17',
-  LSVSell: '0xd67606CAe3A51050bD226ae62381b0fDac478a9A',
+  LSVSupply: '0x3a25aa3f2219104bd1d99589098643f1df2c063c',
+  LSVBorrow: '0x4283b638f17c4641f01f0f1211bfece557796c11',
+  LSVPayback: '0x9f2261e743f6014e73f0d02122dbd56c733025a8',
+  LSVWithdraw: '0x04e4535af5a54194479e4c35cbdd65c7aa897ea7',
+  LSVSell: '0x87334a812c3f8878d9a66154d5d1f4fa5a7aea76',
 
   RecipeExecutor: '0x58d4d41efdecb42924a745fc5856acd2c6fdddc3',
 
