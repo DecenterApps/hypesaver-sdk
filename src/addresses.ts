@@ -19,11 +19,11 @@ export const actionAddresses = {
   MorphoBluePayback: '0x45c413dbf3eef0d54dbb3680cca79689686e50aa',
   MorphoBlueWithdrawCollateral: '0xbdf7f07ebf6f7c5ed4229d9ea0b46eb9ae392035',
 
-  LSVSupply: '0x3a25aa3f2219104bd1d99589098643f1df2c063c',
+  LSVSupply: '0xb9dceeEe3d9731f67887eDb8090e14108a9dbf39',
   LSVBorrow: '0x4283b638f17c4641f01f0f1211bfece557796c11',
   LSVPayback: '0x9f2261e743f6014e73f0d02122dbd56c733025a8',
-  LSVWithdraw: '0x04e4535af5a54194479e4c35cbdd65c7aa897ea7',
-  LSVSell: '0x87334a812c3f8878d9a66154d5d1f4fa5a7aea76',
+  LSVWithdraw: '0x0dd4Cf6B6fbFf394A73471065213211Fb0DC1ed3',
+  LSVSell: '0xf4827330678671C3F08f5977b67D39B118E631d7',
 
   RecipeExecutor: '0x58d4d41efdecb42924a745fc5856acd2c6fdddc3',
 
