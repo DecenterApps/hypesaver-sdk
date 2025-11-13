@@ -27,7 +27,6 @@ export class FLAction extends Action {
   }
 
   constructor(specificFLAction: SpecificFlashLoanAction) {
-    console.log("Flash loan action constructor")
     super('FLAction', getAddr('FLAction'), [], []);
     this.paramTypes = [
       'address[]',
