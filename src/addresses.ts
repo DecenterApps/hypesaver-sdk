@@ -19,6 +19,8 @@ export const actionAddresses = {
   MorphoBluePayback: '0x45c413dbf3eef0d54dbb3680cca79689686e50aa',
   MorphoBlueWithdrawCollateral: '0xbdf7f07ebf6f7c5ed4229d9ea0b46eb9ae392035',
 
+  PendleTokenRedeem: '0x1D14480A2D7BA26ff0E3fBf9adDeD1ED4dD41e04',
+
   LSVSupply: '0x49d337C0F9Cd790108329Fc76fB9e54C6667a50a',
   LSVBorrow: '0x4283b638f17c4641f01f0f1211bfece557796c11',
   LSVPayback: '0x9f2261e743f6014e73f0d02122dbd56c733025a8',
